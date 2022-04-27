@@ -1,4 +1,4 @@
-# Strapi
+# Strapi Skeleton
 
 [Strapi](https://strapi.io/) - Open Source Node.js Headless CMS
 

@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "description": "Strapi",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -10,20 +13,26 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "axios": "^0.20.0",
-    "knex": "<0.20.0",
-    "pg": "^8.3.3",
+    "@ckeditor/ckeditor5-react": "^5.0.0",
+    "ckeditor5-build-strapi": "^0.0.2",
+    "knex": "^0.95.15",
+    "pg": "^8.5.1",
+    "pg-connection-string": "^2.5.0",
     "slugify": "^1.4.5",
-    "strapi": "3.1.4",
-    "strapi-admin": "3.1.4",
-    "strapi-connector-bookshelf": "3.1.4",
-    "strapi-plugin-content-manager": "3.1.4",
-    "strapi-plugin-content-type-builder": "3.1.4",
-    "strapi-plugin-email": "3.1.4",
-    "strapi-plugin-upload": "3.1.4",
-    "strapi-plugin-users-permissions": "3.1.4",
+    "sqlite3": "^5.0.5",
+    "strapi": "3.6.9",
+    "strapi-admin": "3.6.9",
+    "strapi-connector-bookshelf": "3.6.9",
+    "strapi-plugin-content-manager": "3.6.9",
+    "strapi-plugin-content-type-builder": "3.6.9",
+    "strapi-plugin-email": "3.6.9",
+    "strapi-plugin-i18n": "3.6.9",
+    "strapi-plugin-upload": "3.6.9",
+    "strapi-plugin-users-permissions": "3.6.9",
+    "strapi-plugin-vercel": "^0.0.7",
+    "strapi-provider-upload-aws-s3": "^3.3.4",
     "strapi-provider-upload-imagekit": "0.2.1",
-    "strapi-utils": "3.1.4"
-  },
-  "devDependencies": {}
+    "strapi-provider-upload-matrix": "^0.0.2",
+    "strapi-utils": "3.6.9"
+  }
 }

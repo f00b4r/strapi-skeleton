@@ -1,25 +1,25 @@
-DOCKER_POSTGRES=xstrapi-stackuj
+.PHONY: install dev build heroku deploy admin clean
 
-# ################################################
-# Development ####################################
-# ################################################
+HEROKU_APP=xstrapi
 
 install: # Install all dependencies
 	npm ci
 
 dev: # Start Strapi for local development
-	npm run develop
+	NODE_ENV=development npm run develop
 
 build: # Build Strapi CMS
 	npm run build
 
-# ################################################
-# Docker #########################################
-# ################################################
+heroku: # Pair Heroku
+	heroku git:remote -a ${HEROKU_APP}
 
-loc-postgres-stop: ## Stop Postgres for local development
-	docker stop ${DOCKER_POSTGRES} || true
-	docker rm ${DOCKER_POSTGRES} || true
+deploy: # Deploy to Heroku
+	git push heroku master
 
-loc-postgres: loc-postgres-stop ## Run Postgres for local development
-	docker run -it -d -p 5432:5432 --name ${DOCKER_POSTGRES} -e POSTGRES_PASSWORD=strapi -e POSTGRES_USER=strapi dockette/postgres:10
+admin: # Strapi GUI development
+	npx strapi develop --watch-admin
+
+clean: # Clean strapi files
+	rm -rf .cache
+	rm -rf build
