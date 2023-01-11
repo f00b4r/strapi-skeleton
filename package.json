@@ -15,7 +15,7 @@
   "dependencies": {
     "@ckeditor/ckeditor5-react": "^5.0.0",
     "ckeditor5-build-strapi": "^0.0.2",
-    "knex": "^0.95.15",
+    "knex": "^2.4.0",
     "pg": "^8.5.1",
     "pg-connection-string": "^2.5.0",
     "slugify": "^1.4.5",
